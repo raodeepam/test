@@ -16,8 +16,7 @@ jobs:
 
     - name: Install dependency
       run: |
-        sudo add-apt-repository universe
-        sudo apt update
+        sudo add-apt-repository ppa:deadsnakes/ppa
         sudo apt-get update
         sudo apt-get install -y python3.11 python3.11-venv python3-pip jq zip
         pip3 install boto3
