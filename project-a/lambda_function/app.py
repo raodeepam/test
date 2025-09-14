@@ -10,7 +10,7 @@ def lambda_handler(event, context):
     
 
     df = pd.DataFrame(data)
-    print(df.head())
+    print(df.head(5))
 
 
     print("Environment Variables:")
