@@ -38,6 +38,7 @@ jobs:
 
     - name: Package Lambda Function
       run: |
+        cd project-a
         cd lambda_function
         python3.11 -m venv venv
         source venv/bin/activate
@@ -46,7 +47,7 @@ jobs:
         cp app.py ./package/
         cd package
         zip -r ../../lambda.zip .
-        cd ../..
+        cd ../../..
 
     - name: Deploy to AWS Lambda
       env:
